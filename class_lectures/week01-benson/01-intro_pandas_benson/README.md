@@ -27,17 +27,9 @@
 
 **9:45 am**: [Bootcamp Introduction](Bootcamp_Intro.pdf)
 
-**10:15 am**: Introductions from Metis staff
+**11:00 am**: Pair Programming Demo
 
- * Jason Moss
- * Leah Nicolai
-     * [Administrivia](Administrivia.md) (as described in the Student Catalog)
-
-**10:45 am**: Short break
-
-**11:00 am**: [Pair Programming Demo](pair_demo.md)
-
-**11:20 am**: [Pair Problem](pair_fizzbuzz.md)
+**11:20 am**: Pair Problem
 
 **11:45pm**: [Introduce and sign up for Investigations](../../../investigations)
 
@@ -66,7 +58,6 @@
 
 
 ### More Resources
-
  
  * Python, matplotlib, and pandas [cheatsheets](https://drive.google.com/folderview?id=0ByIrJAE4KMTtaGhRcXkxNHhmY2M)
  * Chris Albon has quite a lot of resources on [his site](http://chrisalbon.com/)

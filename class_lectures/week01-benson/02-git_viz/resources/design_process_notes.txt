@@ -1,0 +1,122 @@
+Bo’s talk about design:
+=================
+
+Design — It’s important to know the right questions to ask, and that your designing for the correct audience!
+
+Most important thing — design is a process!
+
+How many people solve data analytic problems:
+0. Data
+1. determine the Problem (already limiting, since it’s based on the existing data)
+2. Analyses
+3. Interface — find a way to explain the results of the analyses
+
+ISSUES: It’s linear — limited to existing data,
+               Putting the interface being last causes you to spend the least amount of time on it,
+        but it’s what the client interacts with the most!
+         This might create a powerful analytic tool that no one can understand very well
+
+A better process:
+- Start with the END USER!
+- Brainstorm based on what problems they face — for possible ways to help address their problems
+- Prototype some of these ideas to create a Minimal Viable Product
+REPEAT with the END USER!
+
+———
+
+Example from DataScope:
+— Someone at Proctor and Gamble came to them, who was just promoted and now oversees 2K -> 20K people.  She needs to manage everyone — not just what they are good at, but also how to connect them and how to structure this company in a more sensible way.
+
+They are based all over the world — she needs to manage the entire R&D division.  Wants them to talk and collaborate, to be more innovative.
+
+NOTE: This process allows us to solve problems in the face of ambiguity.  The goal is not really well-defined, but we have some good directions to think about.  No precise problem or hypothesis.
+
+BRAINSTORM — How can we solve her problem?
+
+    Possible data (email, social media, SMS messages, etc.)
+    Visual and technical analyses
+
+Reported back — if we could use e-mail with “this” then we could perform “this” kind of analysis ad return “this” kind of result.  Response — absolutely not [PRIVACY], but you can use something like “Person with attributes” (name, function, location, division, etc.) from their HR.  Also people are encouraged to write about their work in an internal technical report every few weeks.  Also people took a survey — what topics are you good at, and what are the people in your network good at.
+
+Example of Technical report.  — from this we can extract everything and get metadata as well.
+
+PASS 2:
+————
+Now we can extract project goals from this:
+    - reveal areas of expertise — what topic are they good at?
+    - evaluate the connectivity of those who know this topic
+    - drive management-directed connections — how can mgmt identitfy connections that are valuable?
+
+Next we ask:  how would you like for us to help you connect people?
+“If you had 10K monkeys, what would you build?”
+
+Then BRAINSTORM
+
+Then PROTOTYPE (Still no data!) — just sketches.
+
+Research and testing:  (could be in the field, but for us it’s about asking the end user their opinion)
+
+EXAMPLE:
+Some network diagrams, perhaps we can sort by people
+vs.
+ego-centered network diagram (look at one person, and all of the people they know) and what topics they are good at.
+
+FEEDBACK: I hate the network diagrams — they are overused.  She only liked the bar graph.
+
+Often hand-drawn sketches are better for interface feedback because clients are more honest and feel that it can be changed later.  (People are nice, so try to draw something rough they can play with also.)
+
+BRAINSTORM:  Perhaps have a bar graph that has expertise of people over time?
+
+FEEDBACK: No, that’s too complicated and not so useful, I want something simple.  Keep the bar graph.
+
+ITERATE…
+
+Made a search tool, that comes up with people who might have certain experience,
+Then can go into more depth about the person’s profile.  (STILL NO DATA ACCESS!)
+
+Then the live version was close to this.
+
+===========
+
+PASS 1:
+————
+This is great — it fulfills all of my three design goals, but can we now do this on a broad scale
+company-wide?  “What types of people are talking to what types of people?”
+
+Back to the Design process —
+
+GOALS: reveal areas of expertise, and evaluate connectivity!
+
+BRAINSTORMING: Use a colored Matrix to display the connectivity (across countries).
+
+Example — technical reports (authored by someone, and mentioned some other work in another country).
+
+Could use numbers, but it’s hard to see which are the largest at a glance.  Also what does it mean for the USA to cite 50 other researchers in the USA?  There are so many more researchers in the USA than in Brazil!
+
+Colors are easier (used a normalized color scale) to see which countries collaborate more and less often than “expected”.  Note the details of the normalization are not displayed at all!
+
+Canadians mentioned very few Germans — but if you click it will give you a sample paper.
+
+PASS 2:
+————
+Ok, so now you notice that there are very few americans citiing Brazilians.  Now what?  What can a manager do?  (E-mail them all? NO! Need a way to focus in to address this!)
+
+Back to design process — it’s flexible and allows one to handle vague or changing client needs.
+
+Drilling in example:  Americans and Brazilians — both are writing about certain topics, and are citing each other, or not!  Count the number of documents.
+
+This had many different interactions…
+
+Then a prototype. (Red = bad)
+
+Click on a topics, and the relevant people working on this shows up.
+Then their names are in a rectangle that shows the level of expertise that they have.
+Then it can pull up his personal profile if you click on him.
+
+==================
+
+What are good Design Principles?
+1. BRAINSTORMING — Emphasize QUANTITY over Quality, and don’t judge (until the prototype phase)!
+
+How did they do the topic modelling?
+By a custom wikipedia similarity search algorithm. — do a similarity comparison of the 4.5 million english articles with each of the technical reports.
