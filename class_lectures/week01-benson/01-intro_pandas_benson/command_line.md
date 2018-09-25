@@ -265,7 +265,7 @@ $ find ~ git
 
 **WARNING:** `find` seems to change a lot between shells and Unix distributions, so use the docs.
 
-##### `grep`
+##### `grep` (Global Regular Expression Print)
 Search text for lines matching a specific pattern.
 
 ```
@@ -538,10 +538,9 @@ Frequently you don't know the exact name of a file or files that you want to spe
 * `?`: Matches 1 character of any type
 
 **Example:**
-```
-# Copy all .txt files in a directory to your home directory
-cp sample_directory/*.txt ~
-```
+
+>Copy all .txt files in a directory to your home directory:
+`cp sample_directory/*.txt ~`
 
 ##### Customizing Your Command Prompt
 The environment variable `$PS1` controls the prompt that you see in your shell.  If you'd like to change that prompt, you can do so by changing that environment variable.  Take a look at what it is currently by echoing it to the console:
